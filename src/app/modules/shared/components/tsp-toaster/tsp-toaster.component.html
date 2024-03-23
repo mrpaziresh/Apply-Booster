@@ -1,0 +1,40 @@
+
+<div class="custom-toast"
+[class.success-container]="type == 'toast-success'"
+[class.warning-container]="type == 'toast-warning'"
+[class.error-container]="type == 'toast-error'"
+[class.info-container]="type == 'toast-info'"
+(click)="dismiss()"
+
+>
+  <div class="toast-icon">
+    <div
+      *ngIf="type == 'toast-error'"
+      class=""
+    >
+      <mat-icon svgIcon="error-filled"></mat-icon>
+    </div>
+    <div
+      *ngIf="type == 'toast-success'"
+      class=""
+    >
+      <mat-icon svgIcon="success-filled"></mat-icon>
+    </div>
+    <div
+      *ngIf="type == 'toast-warning'"
+      class=""
+    >
+    <mat-icon svgIcon="warning-filled"></mat-icon>
+      
+    </div>
+    <div *ngIf="type == 'toast-info'" class="material-icons">
+      <mat-icon svgIcon="info-filled"></mat-icon>
+    </div>
+  </div>
+  <div class="text-area">
+    <div class="toast-title" *ngIf="title">{{ title }}</div>
+    <div class="toast-message">{{ message }}</div>
+  </div>
+
+
+</div>

@@ -1,0 +1,13 @@
+<div class="tsp-input">
+    <input type="text"
+            class="medium persian-number ltr"
+            [class.have-unit]="unit"
+            placeholder=" "
+            [disabled]="componentDisabled"
+            [class.mandatory]="inputMandatory"
+            [InputControlDirective]="'price'"
+            [ngModel]="price | commaSeparator" 
+            (ngModelChange)="valueEntered($event)"
+            id="price">
+    <label for="price">{{label}}</label>
+</div>

@@ -1,0 +1,50 @@
+<div class="container">
+        <div class="otp-body">
+            <div class="otp-field">
+                        <input
+                          #firstInput
+                          class="field persian-number"
+                          type="text"
+                          (ngModelChange)="onOtpInputChange($event,1)"
+                          [maxLengthJump]="1"
+                          maxlength="1"
+                          [(ngModel)]="firstDigit"
+                          placeholder=" "/>
+                        <input
+                          class="field persian-number"
+                          type="text"
+                          [disabled]="true"
+                          [maxLengthJump]="1"
+                          (ngModelChange)="onOtpInputChange($event,2)"
+                          maxlength="1"
+                          [(ngModel)]="secondDigit"
+                          placeholder=" "/>
+                        <input
+                          class="field persian-number"
+                          type="text"
+                          [disabled]="true"
+                          [maxLengthJump]="1"
+                          (ngModelChange)="onOtpInputChange($event,3)"
+                          maxlength="1"
+                          [(ngModel)]="thirdDigit"
+                          placeholder=" "/>
+                        <input
+                          class="field persian-number"
+                          type="text"
+                          [disabled]="true"
+                          [maxLengthJump]="1"
+                          (ngModelChange)="onOtpInputChange($event,4)"
+                          maxlength="1"
+                          [(ngModel)]="fourthDigit"
+                          placeholder=" "/>
+                        <input
+                          class="field persian-number"
+                          [maxLengthJump]="1"
+                          type="text"
+                          [disabled]="true"
+                          (ngModelChange)="onOtpInputChange($event,5)"
+                          maxlength="1"
+                          [(ngModel)]="fifthDigit"
+                          placeholder=" "/>
+            </div>
+</div>

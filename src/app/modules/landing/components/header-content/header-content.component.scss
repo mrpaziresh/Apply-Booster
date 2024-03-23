@@ -1,0 +1,158 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins/Poppins-ExtraLight.ttf') format('ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins/Poppins-Medium.ttf') format('ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins/Poppins-Bold.ttf') format('ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+.container {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  display: flex;
+  background-color: #ffffff;
+
+
+  .banner {
+    
+    background-color: #fff3e4;
+    clip-path: ellipse(100% 50% at 50% 0%);
+    height: 1600px;
+    width: 100%;
+    background-image: url("../../../../../assets/images/Header-content.png");
+    background-size: contain;
+    background-position: top center; 
+    background-repeat: repeat;
+    text-align: center; 
+    position: relative;
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; 
+
+
+    .button-container{
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+      .login-button,
+      .boost-button {
+        background-color: #ffffff;
+        border-radius: 28px;
+        border-width: 0;
+        color: #6C6C6C;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        list-style: none;
+        padding: 10px 35px;
+        text-align: center;
+        transition: all 200ms;
+        white-space: nowrap;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+      }
+
+      .boost-button {
+        background-color: #F48C06;
+        color: #ffffff;
+        margin: 0px 70px 0px 25px;
+        font-weight: 700;
+        font-size: 15px;
+        padding: 10px 25px;
+      }
+    }
+    .logo {
+      height: 48px;
+      padding: 40px 100px;
+    }
+   }
+
+   .slogan{
+    display: flex; 
+    text-align: center;
+    line-height: 1.6;
+    align-items: center;
+    justify-content: center;
+    color: #2F327D;
+    // font-weight: 700;
+    font-size: 30px;
+    
+    h1 {
+    margin-top: -10px;
+    }
+    span{
+      color: #F48C06;
+    }
+   }
+   .below-slogan{
+    text-align: center;
+    margin-top: -20px;
+    color: #464646;
+    font-size: 22px;
+    font-weight: 300;
+   }
+   .upload-button {
+    background-color: #F48C06;
+    border-radius: 28px;
+    border-width: 0;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 20px;
+    list-style: none;
+    margin-top: 50px;
+    padding: 17px 48px;
+    text-align: center;
+    transition: all 200ms;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+   }
+  .block{
+    img{
+      height: 190px;
+      margin-top: 80px;
+      position: relative;
+    }
+   }
+  
+
+  }
+
+}
+.title {
+  font-size: 33px;
+  font-weight: 700;
+  color: #2F327D;
+  margin-top: 200px;
+  text-align: center;
+
+  span{
+    color: #F48C06;
+  }
+}
+
+
+
+ 

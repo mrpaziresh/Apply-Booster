@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="tsp-input">
+    <ng-select
+      placeholder=" سال "
+      [items]="yearsList"
+      class="medium"
+      dropdownPosition="auto"
+      (change)="onYearValueChange($event)"
+      [(ngModel)]="year"
+      required
+    >
+    </ng-select>
+  </div>
+  <div class="tsp-input">
+    <ng-select
+      placeholder=" ماه "
+      [items]="monthsList"
+      class="medium"
+      dropdownPosition="auto"
+      (change)="onMonthValueChange($event)"
+      [(ngModel)]="month"
+      bindLabel="monthName"
+      bindValue="monthNumber"
+      required
+    >
+    </ng-select>
+  </div>
+  <div class="tsp-input">
+    <ng-select
+      placeholder=" روز "
+      [items]="daysList"
+      class="medium"
+      dropdownPosition="auto"
+      (change)="onDayValueChange($event)"
+      [(ngModel)]="day"
+      required
+    >
+    </ng-select>
+  </div>
+</div>
