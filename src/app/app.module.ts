@@ -28,7 +28,7 @@ import { FormsModule } from '@angular/forms';
     FeatureBoxComponent,
     CommentBarComponent,
     FooterComponent,
-    UploadDialogComponent
+    UploadDialogComponent,
 
   ],
   imports: [

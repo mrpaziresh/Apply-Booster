@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="defaultstep">
   <div class="logo">
     <img src="/assets/images/Logo.svg" />
   </div>
@@ -26,7 +26,7 @@
 
   <div class="under-box-text">
     <div class="agree-checkbox">
-      <input type="checkbox" id="agree-checkbox" />
+      <input type="checkbox" id="agree-checkbox" (click)="agreePolicy()" />
       <label for="agree-checkbox"></label>
     </div>
     <p>
@@ -34,7 +34,92 @@
       ApplyBooster.
     </p>
   </div>
-  <button class="upload-button" (click)="openFileInput()" role="button">
+  <button
+    class="upload-button"
+    (click)="openFileInput()"
+    role="button"
+    [disabled]="!isagree"
+  >
     Upload
   </button>
+</div>
+
+<div class="container" *ngIf="!stepone">
+  <div class="logo">
+    <img src="/assets/images/Logo.svg" />
+  </div>
+
+  <div
+    class="circle-loader"
+    [ngClass]="{ success: isSuccess, failed: isFailed }"
+  >
+    <div class="status draw"></div>
+  </div>
+
+  <div class="text" id="steper">
+    <h1 *ngIf="!isSuccess"><span>Uploading </span>{{ filename }}</h1>
+    <h1 id="success" *ngIf="isSuccess">upload was successful</h1>
+    <p *ngIf="!isSuccess">Please wait...</p>
+    <p *ngIf="isSuccess">step 1/4</p>
+  </div>
+</div>
+
+<div class="container" *ngIf="!steptwo">
+  <div class="logo">
+    <img src="/assets/images/Logo.svg" />
+  </div>
+
+  <div
+    class="circle-loader"
+    [ngClass]="{ success: isSuccess, failed: isFailed }"
+  >
+    <div class="status draw"></div>
+  </div>
+
+  <div class="text" id="steper">
+    <h1 *ngIf="!isSuccess">Extracting data from resume</h1>
+    <h1 id="success" *ngIf="isSuccess">Extracting was successful</h1>
+    <p *ngIf="!isSuccess">Please wait...</p>
+    <p *ngIf="isSuccess">step 2/4</p>
+  </div>
+</div>
+
+<div class="container" *ngIf="!stepthree">
+  <div class="logo">
+    <img src="/assets/images/Logo.svg" />
+  </div>
+
+  <div
+    class="circle-loader"
+    [ngClass]="{ success: isSuccess, failed: isFailed }"
+  >
+    <div class="status draw"></div>
+  </div>
+
+  <div class="text" id="steper">
+    <h1 *ngIf="!isSuccess">Sending data to server</h1>
+    <h1 id="success" *ngIf="isSuccess">Sending was successful</h1>
+    <p *ngIf="!isSuccess">Please wait...</p>
+    <p *ngIf="isSuccess">step 3/4</p>
+  </div>
+</div>
+
+<div class="container" *ngIf="!stepfour">
+  <div class="logo">
+    <img src="/assets/images/Logo.svg" />
+  </div>
+
+  <div
+    class="circle-loader"
+    [ngClass]="{ success: isSuccess, failed: isFailed }"
+  >
+    <div class="status draw"></div>
+  </div>
+
+  <div class="text" id="steper">
+    <h1 *ngIf="!isSuccess">Fetching Feedback</h1>
+    <h1 id="success" *ngIf="isSuccess">Done</h1>
+    <p *ngIf="!isSuccess">Please wait...</p>
+    <p *ngIf="isSuccess">Redirecting to checkpage</p>
+  </div>
 </div>

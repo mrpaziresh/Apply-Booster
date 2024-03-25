@@ -7,9 +7,27 @@ import { Component } from '@angular/core';
 })
 export class UploadDialogComponent {
 
-  constructor() { }
+  isSuccess: boolean = false;
+  isFailed: boolean = false;
+   stepone : boolean = true;
+   defaultstep:boolean = true;
+   steptwo : boolean = true;
+   stepthree : boolean = true;
+   stepfour : boolean = true;
+   isagree : boolean = false;
+   filename: any;
+
+  constructor() { 
+    
+  }
+
+
   openFileInput() {
     document.getElementById('fileInput')?.click();
+  }
+
+  agreePolicy(){
+    this.isagree = true;
   }
 
   handleFileInput(event: Event) {
@@ -18,13 +36,78 @@ export class UploadDialogComponent {
     if (files && files.length > 0) {
       const file = files[0];
       if (file.type === 'application/pdf') {
+
+        
    
         console.log('Selected PDF file:', file.name);
+        this.defaultstep = false;
+        this.stepone = false;
+        this.filename = file.name;
+
+
+        setTimeout(() => {
+
+          this.defaultstep = false;
+          this.isSuccess = !this.isSuccess;
+    
+        }, 3000);
+    
+        setTimeout(() => {
+          
+          this.stepone = true;
+          this.steptwo = !this.steptwo;
+          this.isSuccess = !this.isSuccess;
+    
+        }, 4000);
+        setTimeout(() => {
+          
+          
+          this.isSuccess = !this.isSuccess;
+    
+        }, 6000);
+    
+        setTimeout(() => {
+          
+          this.steptwo = !this.steptwo;
+          this.stepthree = false;
+          this.isSuccess = !this.isSuccess;
+    
+        }, 7000);
+        setTimeout(() => {
+          this.stepthree = false;
+          this.isSuccess = !this.isSuccess;
+          
+        }, 9000);
+    
+        setTimeout(() => {
+          
+          this.stepthree = !this.stepthree;
+          this.stepfour = false;
+          this.isSuccess = !this.isSuccess;
+    
+        }, 10000);
+    
+        setTimeout(() => {
+          this.stepfour = false;
+          this.isSuccess = !this.isSuccess;
+          
+        }, 12000);
+        
 
       } else {
         
         console.log('Invalid file type. Please select a PDF file.');
       }
     }
+  }
+
+  toggleSuccess() {
+    this.isSuccess = !this.isSuccess;
+    this.isFailed = false;
+  }
+
+  toggleFailed() {
+    this.isFailed = !this.isFailed;
+    this.isSuccess = false;
   }
 }
