@@ -128,15 +128,31 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    transition: transform 225ms cubic-bezier(0.4, 0, 0.2, 1);
    }
-  .block{
+   .upload-button:hover {
+    transform: scale(1.1);
+  }
+  
+   .block {
+    position: relative;
+    
+    margin-top: 80px;
+    animation: slideUpDown 7s infinite;
     img{
       height: 190px;
-      margin-top: 80px;
-      position: relative;
     }
-   }
-  
+  }
+
+  @keyframes slideUpDown {
+    0%, 100% {
+      transform: translateY(-10px);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+  }
+
 
   }
 
@@ -151,8 +167,14 @@
   span{
     color: #F48C06;
   }
+  
+  
 }
 
+.mat-mdc-dialog-container._mat-animation-noopable .mdc-dialog__container, .mat-mdc-dialog-container._mat-animation-noopable .mdc-dialog__surface{
+
+  border-radius: 30px;
+}
 
 
  

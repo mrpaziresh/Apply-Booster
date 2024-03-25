@@ -15,6 +15,8 @@ import { CommentBarComponent } from './modules/landing/components/comment-bar/co
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import { FooterComponent } from './modules/landing/components/footer/footer.component';
 import { UploadDialogComponent } from './modules/checkpage/components/upload-dialog/upload-dialog.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,10 +32,12 @@ import { UploadDialogComponent } from './modules/checkpage/components/upload-dia
 
   ],
   imports: [
+    BrowserAnimationsModule,
     MatIconModule,
     BrowserModule,
     AppRoutingModule,
-    ScrollingModule
+    ScrollingModule,
+    FormsModule
   ],
   providers: [
     IconGeneratorService,

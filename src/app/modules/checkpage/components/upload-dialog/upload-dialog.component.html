@@ -1,1 +1,40 @@
-<p>upload-dialog works!</p>
+<div class="container">
+  <div class="logo">
+    <img src="/assets/images/Logo.svg" />
+  </div>
+
+  <input
+    type="file"
+    id="fileInput"
+    style="display: none"
+    (change)="handleFileInput($event)"
+    accept=".pdf"
+  />
+
+  <div class="upload-box" (click)="openFileInput()">
+    <div class="icon">
+      <img src="/assets/icons/upload-button.svg" />
+    </div>
+    <div class="text">
+      <h1>
+        <span>Upload </span>your <br />
+        Resume Here!
+      </h1>
+      <p>Click here to select a PDF file</p>
+    </div>
+  </div>
+
+  <div class="under-box-text">
+    <div class="agree-checkbox">
+      <input type="checkbox" id="agree-checkbox" />
+      <label for="agree-checkbox"></label>
+    </div>
+    <p>
+      Agree with our <span>Privacy</span> and <span>Policy</span> of
+      ApplyBooster.
+    </p>
+  </div>
+  <button class="upload-button" (click)="openFileInput()" role="button">
+    Upload
+  </button>
+</div>

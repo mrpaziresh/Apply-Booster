@@ -2,3 +2,9 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-mdc-dialog-container._mat-animation-noopable .mdc-dialog__container, .mat-mdc-dialog-container._mat-animation-noopable .mdc-dialog__surface{
+
+    border-radius: 20px;
+  }
+  

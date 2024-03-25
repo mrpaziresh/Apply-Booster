@@ -17,7 +17,14 @@
       <div class="below-slogan">
         Upload your Resume in one click and Improve it instantly!
       </div>
-      <button class="upload-button" role="button">Upload Here!</button>
+      <button
+        class="upload-button"
+        role="button"
+        mat-button
+        (click)="openUploadDialog()"
+      >
+        Upload Here!
+      </button>
       <!-- <img src="../../../assets/images/Red-underline-set.svg" class="underline" /> -->
       <div class="block">
         <img src="/assets/images/three-block.svg" />
