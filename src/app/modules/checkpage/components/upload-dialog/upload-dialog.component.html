@@ -25,21 +25,12 @@
   </div>
 
   <div class="under-box-text">
-    <div class="agree-checkbox">
-      <input type="checkbox" id="agree-checkbox" (click)="agreePolicy()" />
-      <label for="agree-checkbox"></label>
-    </div>
     <p>
-      Agree with our <span>Privacy</span> and <span>Policy</span> of
-      ApplyBooster.
+      Uploading a resume means you're agree with <span>Privacy</span> and
+      <span>Policy</span> of ApplyBooster.
     </p>
   </div>
-  <button
-    class="upload-button"
-    (click)="openFileInput()"
-    role="button"
-    [disabled]="!isagree"
-  >
+  <button class="upload-button" (click)="openFileInput()" role="button">
     Upload
   </button>
 </div>
@@ -57,7 +48,9 @@
   </div>
 
   <div class="text" id="steper">
-    <h1 *ngIf="!isSuccess"><span>Uploading </span>{{ filename }}</h1>
+    <h1 *ngIf="!isSuccess">
+      Uploading <span>{{ filename }}</span>
+    </h1>
     <h1 id="success" *ngIf="isSuccess">upload was successful</h1>
     <p *ngIf="!isSuccess">Please wait...</p>
     <p *ngIf="isSuccess">step 1/4</p>

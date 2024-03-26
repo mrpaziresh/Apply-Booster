@@ -14,7 +14,6 @@ export class UploadDialogComponent {
    steptwo : boolean = true;
    stepthree : boolean = true;
    stepfour : boolean = true;
-   isagree : boolean = false;
    filename: any;
 
   constructor() { 
@@ -24,10 +23,6 @@ export class UploadDialogComponent {
 
   openFileInput() {
     document.getElementById('fileInput')?.click();
-  }
-
-  agreePolicy(){
-    this.isagree = true;
   }
 
   handleFileInput(event: Event) {

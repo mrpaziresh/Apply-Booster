@@ -17,6 +17,7 @@ import { FooterComponent } from './modules/landing/components/footer/footer.comp
 import { UploadDialogComponent } from './modules/checkpage/components/upload-dialog/upload-dialog.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './modules/login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +30,7 @@ import { FormsModule } from '@angular/forms';
     CommentBarComponent,
     FooterComponent,
     UploadDialogComponent,
+    LoginComponent,
 
   ],
   imports: [
