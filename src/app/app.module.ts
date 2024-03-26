@@ -18,6 +18,7 @@ import { UploadDialogComponent } from './modules/checkpage/components/upload-dia
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './modules/login/login.component';
+import { PolicyDialogComponent } from './modules/checkpage/components/policy-dialog/policy-dialog.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,7 @@ import { LoginComponent } from './modules/login/login.component';
     FooterComponent,
     UploadDialogComponent,
     LoginComponent,
+    PolicyDialogComponent,
 
   ],
   imports: [

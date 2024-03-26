@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { PolicyDialogComponent } from '../policy-dialog/policy-dialog.component';
 
 @Component({
   selector: 'app-upload-dialog',
@@ -16,7 +18,9 @@ export class UploadDialogComponent {
    stepfour : boolean = true;
    filename: any;
 
-  constructor() { 
+  constructor( 
+    private dialog : MatDialog
+    ) { 
     
   }
 
@@ -104,5 +108,18 @@ export class UploadDialogComponent {
   toggleFailed() {
     this.isFailed = !this.isFailed;
     this.isSuccess = false;
+  }
+
+  openPolicyDialog(){
+
+    let dialog = this.dialog.open(PolicyDialogComponent, {
+      width: '678',
+      panelClass: 'custom-dialog',
+      
+    });
+    dialog.afterClosed().subscribe((res) => {
+      
+    });
+
   }
 }

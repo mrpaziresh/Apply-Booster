@@ -26,8 +26,9 @@
 
   <div class="under-box-text">
     <p>
-      Uploading a resume means you're agree with <span>Privacy</span> and
-      <span>Policy</span> of ApplyBooster.
+      Uploading a resume means you're agree with
+      <span (click)="openPolicyDialog()">Privacy</span> and
+      <span (click)="openPolicyDialog()">Policy</span> of ApplyBooster.
     </p>
   </div>
   <button class="upload-button" (click)="openFileInput()" role="button">
@@ -116,3 +117,13 @@
     <p *ngIf="isSuccess">Redirecting to checkpage</p>
   </div>
 </div>
+
+<!-- <div class="lines">
+  <div class="line1"></div>
+  <div class="line2"></div>
+  <div class="line3"></div>
+  <div class="line4"></div>
+  <div class="line5"></div>
+  <div class="line6"></div>
+  <div class="line7"></div>
+</div> -->

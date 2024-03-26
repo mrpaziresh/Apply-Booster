@@ -91,6 +91,7 @@ h1{
     font-weight: 400;
 }
  span {
+    cursor: pointer;
     color: #F48C06;
 }
 
@@ -203,4 +204,71 @@ h1{
     }
 }
 
+.line1{
+    background-color: #f48c06;
+    width: 30px;
+    height: 4px;
+    position: relative;
+    top: -113px;
+    left: 35px;
+    border-radius: 10px;
 
+}
+
+.line2{
+    background-color: #d9d9d9;
+    width: 37px;
+    height: 4px;
+    position: relative;
+    top: -98px;
+    left: 35px;
+    border-radius: 10px;
+}
+
+.line3{
+    background-color: #d9d9d9;
+    width: 39px;
+    height: 4px;
+    position: relative;
+    top: -94px;
+    left: 35px;
+    border-radius: 10px;
+}
+
+.line4{
+    background-color: #d9d9d9;
+    width: 41px;
+    height: 4px;
+    position: relative;
+    top: -91px;
+    left: 35px;
+    border-radius: 10px;
+}
+
+.line5{
+    background-color: #d9d9d9;
+          width: 28px;
+          height: 4px;
+          position: relative;
+          top: -77px;
+          left: 35px;
+          border-radius: 10px;
+}
+.line6{
+    background-color: #d9d9d9;
+    width: 42px;
+    height: 4px;
+    position: relative;
+    top: -72px;
+    left: 35px;
+    border-radius: 10px;
+}
+.line7{
+    background-color: #d9d9d9;
+          width: 42px;
+          height: 4px;
+          position: relative;
+          top: -65px;
+          left: 35px;
+          border-radius: 10px;
+}
