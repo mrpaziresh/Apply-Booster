@@ -19,6 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './modules/login/login.component';
 import { PolicyDialogComponent } from './modules/checkpage/components/policy-dialog/policy-dialog.component';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +43,8 @@ import { PolicyDialogComponent } from './modules/checkpage/components/policy-dia
     BrowserModule,
     AppRoutingModule,
     ScrollingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [
     IconGeneratorService,
